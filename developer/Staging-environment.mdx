@@ -1,0 +1,20 @@
+---
+title: "Using the staging environment"
+description: "Things to keep in mind when using your Engage staging environment"
+---
+
+As a Voyado customer, it can happen that you want to test our many functions and features before going live. You can then request access to the Staging environment.
+
+Staging is where new features in the platform are tested, bugs are ironed out and flows are perfected. It’s primarily a testing environment for our development teams, but if you as a customer want to use it, then welcome\! However, keep a few things in mind:
+
+**Stability**: Since Staging is where we test our next release and deploy our new code, it can go down without warning. So don’t count on it being up and running at any one time.
+
+**Performance**: Staging, being a test environment, is not optimized for performance and could be a lot slower than your live environment. It is primarily a place for testing functionality and patterns, not volume and speed. Do not import more than 100,000 contacts.
+
+**Data**: You can import your data into Staging. But beware that you cannot then transfer this data from Staging into your live environment. It will need to be imported again.
+
+**Privacy**: When using Staging we recommend that you use dummy contacts and not import real contact data. Any real contact data in Staging could create GDPR issues, so when using Staging be sure to remove all such sensitive data when you are done.
+
+**Features**: Features in Staging might not always match those in your live environment.
+
+**Allowlist**: For security reasons, emails can only be sent out to customers from the Staging environment if the email address (or phone number in the case of SMS) has been added to the allowlist. Your assigned project team at Voyado will need to do this for you. See [this page](https://developer.voyado.com/en/staging-environment/allowlist.html) for more information.
