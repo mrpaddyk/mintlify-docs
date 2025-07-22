@@ -1,5 +1,86 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "Custom triggers"
+description: "Description of your new file."
 ---
 
+Engage's automation functionality lets you create individual marketing journeys for every contact in your system. Purchases, birthdays and other events can act as triggers to start up automated flows based on a specific contact's data.
+
+You can also set up your own custom triggers that can start automations. For example, if you want to use some event in your POS that doesn't have a built-in trigger in Engage to start an automation, a custom trigger is how to do it.
+
+## **About custom triggers**
+
+Custom triggers are a way for external systems to manually trigger Engage to start an automation. You can set up custom triggers yourself in [<u>the Engage configuration area</u>](https://developer.voyado.com/en/configure-engage/custom-triggers.html).
+
+Once a custom trigger is set up, you can find it in Engage when you select "New automation". Now you can see the list of all the triggers available, with the standard ones placed on top.
+
+![Alt text describing the image](developer/images/custom-triggers-01.png)
+
+At the bottom of this list, you should find your custom trigger or triggers.
+
+![Alt text describing the image](developer/images/custom-triggers-02.png)
+
+From this point on, your custom trigger can be handled like a standard one. Use it to create an automation, and create branches based on the incoming data.
+
+Here you can see an example of a custom trigger automation:
+
+![Alt text describing the image](developer/images/custom-triggers-03.png)
+
+When this trigger is activated, contacts are moved into one of three branches, depending on a keyword found by a valuesplit (Bike, Ski or everything else) and sent an SMS. The number of contacts directed into each of the three branches can be seen, as well as the total number who triggered this automation.
+
+The important points to remember about custom triggers are:
+
+- They are called over the API using triggerId plus some identifier (contactId or another key)
+- They can receive JSON data (data fields), the structure of which is defined per custom trigger
+
+The data fields in your custom trigger can be used both for filtering in the automation and also as variable data in the content produced by the automation.
+
+## **Using a custom trigger**
+
+In Engage, you can set up as many custom triggers as you want, as long as each triggerId is unique.
+
+Some identifying value for the contact also needs to be sent (contactId or whatever is configured). The key used should be decided in collaboration with your Voyado team.
+
+A custom trigger can only be triggered for an contact that exists in Engage.
+
+There are a few ways to activate a custom trigger over the API, depending on what information you have:
+
+### **If you know the contact ID**
+
+`POST /api/v3/automation/customTriggers/{triggerId}/triggerByContactId/{contactId}`
+
+### **If you know contact type and the key identifer value**
+
+`POST /api/v3/automation/customTriggers/{triggerId}/triggerByContactTypeAndKey/{contactType}/{keyValue}`
+
+### **If you know the external contact ID**
+
+`POST /api/v3/automation/customTriggers/{triggerId}/triggerByExternalContactId/{externalId}`
+
+### **If you know the personal identity number**
+
+`POST /api/v3/automation/customTriggers/{triggerId}/triggerBySocialSecurityNumber/{ssn}`
+
+### **Examples of values**
+
+| Name        | Type   | Example value                        |
+| ----------- | ------ | ------------------------------------ |
+| triggerId   | String | aCustomTrigger                       |
+| contactId   | GUID   | a67f201f-d86d-4ee2-bdc7-abce4444a804 |
+| contactType | String | Member                               |
+| keyValue    | String | mobilePhone                          |
+| externalId  | String | 012345                               |
+| ssn         | String | 198101010101                         |
+
+## **Payload example**
+
+Custom triggers are often used for transactional communication from the e-com or business layer to the end user. In these cases, a payload is often sent. Below is an example of the setup in the backend for a custom trigger that is used to populate a reset password email.
+
+```
+{
+    "oldAccount":"true" OR "false",
+    "username":"[username]",
+    "resetUrlHTML":"[http address of unique reset link]"
+}
+```
+
+The value of the “oldAccount” flag can be used to filter different kinds of communication or trigger a specific automation. All automations using a certain trigger will listen for any responding API call but only the responding data sent in the payload will start the specific automation.
