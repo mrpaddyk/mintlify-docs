@@ -14,11 +14,11 @@
         "tab": "Guides",
         "groups": [
           {
-            "group": "Get Started",
+            "group": "Developer",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "developer/introduction",
+              "developer/staging-environment",
+              "developer/custom-triggers"
             ]
           },
           {
