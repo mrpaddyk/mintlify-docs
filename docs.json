@@ -12,7 +12,7 @@
     "tabs": [
       {
         "tab": "API Reference",
-        "openapi": "openapi-engage.json"
+        "openapi": "api-reference/openapi-engage.json"
       },
       {
         "tab": "Guides",
