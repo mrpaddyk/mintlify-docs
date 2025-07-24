@@ -7,7 +7,7 @@
       "display": "interactive"
     },
     "examples": {
-      "languages": ["csharp", "curl", "python", "javascript"],
+      "languages": ["curl", "python", "javascript"],
       "defaults": "required"
     }
   },
