@@ -109,7 +109,7 @@
       "display": "interactive"
     },
     "examples": {
-      "languages": ["curl", "python", "javascript"],
+      "languages": ["csharp", "curl", "python", "javascript"],
       "defaults": "required"
     }
   }
