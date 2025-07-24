@@ -14,11 +14,24 @@
         "tab": "Guides",
         "groups": [
           {
-            "group": "Developer",
+            "group": "Developer level 1",
             "pages": [
-              "developer/introduction",
+              "developer/introduction-1",
               "developer/staging-environment",
-              "developer/custom-triggers"
+              "developer/custom-triggers-1",
+              {
+                "group": "Developer level 2",
+                "pages": [
+                  "developer/introduction-2",
+                  "developer/custom-triggers-2",
+                  {
+                    "group": "Developer level 3",
+                    "pages": [
+                      "developer/introduction-3"
+                    ]
+                  }
+                ]
+              }
             ]
           },
           {
