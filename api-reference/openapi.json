@@ -10,6 +10,53 @@
         }
     },
     "paths": {
+        "/api/v3/contacts/{contactId}/achievements": {
+            "get": {
+                "tags": [
+                    "achievements"
+                ],
+                "operationId": "Achievements_GetAchievementsForContact",
+                "parameters": [
+                    {
+                        "name": "contactId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "uuid"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/ApiAchievementValue"
+                                    }
+                                }
+                            },
+                            "application/problem+json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/ApiAchievementValue"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "apikey": []
+                    }
+                ]
+            }
+        },
         "/api/v3/achievements": {
             "get": {
                 "tags": [
