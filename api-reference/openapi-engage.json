@@ -464,8 +464,8 @@
                 "tags": [
                     "challenges"
                 ],
-                "summary": "Get challenge assignment by id.",
-                "description": "Get an challenge assignment by id.",
+                "summary": "Get challenge assignment by ID",
+                "description": "Get an challenge assignment by ID",
                 "operationId": "Challenge_GetChallengeById",
                 "parameters": [
                     {
@@ -544,8 +544,8 @@
                 "tags": [
                     "challenges"
                 ],
-                "summary": "Get a challenge definition by id.",
-                "description": "Get a challenge definition by id.",
+                "summary": "Get a challenge definition by ID",
+                "description": "Get a challenge definition by ID",
                 "operationId": "Challenge_GetChallengeDefinitionById",
                 "parameters": [
                     {
@@ -610,7 +610,7 @@
                 "tags": [
                     "challenges"
                 ],
-                "summary": "Get a list of all the challenge definitions.",
+                "summary": "Get all challenge definitions",
                 "description": "Get a list of all the challenge definitions.",
                 "operationId": "Challenge_GetChallengeDefinitions",
                 "parameters": [
@@ -729,7 +729,7 @@
                 "tags": [
                     "challenges"
                 ],
-                "summary": "Search for challenges for a contact",
+                "summary": "Get all challenges for a contact",
                 "description": "Search for challenges for a contact.",
                 "operationId": "Challenge_GetChallenges",
                 "parameters": [
@@ -870,7 +870,7 @@
                 "tags": [
                     "challenges"
                 ],
-                "summary": "Add checkpoints to contacts",
+                "summary": "Add checkpoints to one or many contacts",
                 "description": "Send in a list of checkpoints to be assigned to a some challenge for a number of contacts,\r\nthe endpoint will be able to take max 1000 checkpoint rows.\r\n            \r\n### The following fields should be provided:\r\n            \r\n- definitionId: Must be a Guid\r\n- contactId: Must be a Guid\r\n- checkPointAmount: Number of checkpoints to assign to the challenge\r\n            \r\n### Important info:\r\nIf some rows are not correct it will still result in an OK response code and the incorrect checkpoints will be skipped. Please\r\ncheck the response for NotAccepted items.",
                 "operationId": "Challenge_AddChallengeCheckPoints",
                 "requestBody": {
@@ -950,7 +950,7 @@
                 "tags": [
                     "challenges"
                 ],
-                "summary": "Assign a specific challenge to the approved contact, considering that the contact has granted approval.",
+                "summary": "Assign challenge to contact (with their approval)",
                 "description": "Will assign the challenge for the contact and return true. If the contact already\r\nhas been assigned for the challenge it will also return true.",
                 "operationId": "Challenge_Consent",
                 "parameters": [
@@ -1045,7 +1045,7 @@
                 "tags": [
                     "contactoverview"
                 ],
-                "summary": "Get all information about a single contact.",
+                "summary": "Get a contact's full information",
                 "description": "Get all information about a single contact by specifying either:\r\n- contactId\r\n- email and contactType\r\n- socialSecurityNumber and contactType\r\n- mobilePhone and contactType\r\n- customKey and contactType (the customKey must be configured by your supplier)\r\n- any and contactType - the any field can contain email, socialSecurityNumber, mobilePhone or the custom key (and are checked in that order)\r\n            \r\nThe dynamic fields of the response depend on your current Voyado configuration.",
                 "operationId": "ContactOverview_GetContactOverviewAsync",
                 "parameters": [
@@ -1153,7 +1153,7 @@
                 "tags": [
                     "contacts"
                 ],
-                "summary": "Get a single contact.",
+                "summary": "Get a single contact's data",
                 "description": "Get a single contact, using the unique identifier.\r\n\r\nThe dynamic fields of the response object depend on\r\nthe current instance configuration.",
                 "operationId": "ContactsV_GetContactById",
                 "parameters": [
@@ -1198,7 +1198,7 @@
                 "tags": [
                     "contacts"
                 ],
-                "summary": "Deletes a contact",
+                "summary": "Delete a contact",
                 "operationId": "ContactsV_ContactDelete",
                 "parameters": [
                     {
@@ -1251,7 +1251,7 @@
                 "tags": [
                     "contacts"
                 ],
-                "summary": "Update a contact.",
+                "summary": "Update a contact",
                 "description": "Update one or several fields of a single contact.\r\nDo not send an empty value unless you want it to be empty.",
                 "operationId": "ContactsV_ContactPatch",
                 "parameters": [
@@ -1315,7 +1315,7 @@
                 "tags": [
                     "contacts"
                 ],
-                "summary": "Get status for a specific contact bulk import",
+                "summary": "Get status of contact bulk import",
                 "description": "",
                 "operationId": "ContactBulk_GetBulkStatus",
                 "parameters": [
@@ -1365,7 +1365,7 @@
                 "tags": [
                     "contacts"
                 ],
-                "summary": "Get recommended products for a contact.",
+                "summary": "Get recommended products for a contact",
                 "operationId": "ProductRecommendation_GetProductRecommendations",
                 "parameters": [
                     {
@@ -1413,7 +1413,7 @@
                 "tags": [
                     "contacts"
                 ],
-                "summary": "Get purchase history summary for a single contact.",
+                "summary": "Get purchase history for contact",
                 "description": "Following summary shows the purchase history for a single contact, over all time, 12 months and 24 months.",
                 "operationId": "ContactRetailKpi_GetPurchaseHistory",
                 "parameters": [
@@ -1472,7 +1472,7 @@
                 "tags": [
                     "contacts"
                 ],
-                "summary": "Get the latest SMS messages a contact has received, max 500",
+                "summary": "Get a contact's latest SMS messages (max 500)",
                 "description": "Can retrieve messages up to three (3) months old",
                 "operationId": "ContactMessage_GetSmsMessagesByContactId",
                 "parameters": [
@@ -1529,7 +1529,7 @@
                 "tags": [
                     "contacts"
                 ],
-                "summary": "Get the latest email messages a contact has received, max 500",
+                "summary": "Get a contact's latest emails (max 500)",
                 "description": "Can retrieve messages up to three (3) months old",
                 "operationId": "ContactMessage_GetEmailMessagesByContactId",
                 "parameters": [
@@ -1586,7 +1586,7 @@
                 "tags": [
                     "contacts"
                 ],
-                "summary": "Get a single contact by type and external id.",
+                "summary": "Get contact by type and external ID",
                 "description": "Get a single contact of a certain type, using the\r\ncontact's external id.\r\n\r\nThe dynamic fields of the response object depend on\r\nthe current configuration.",
                 "operationId": "ContactsV_GetContactByExternalIdAsync",
                 "parameters": [
@@ -1644,7 +1644,7 @@
                 "tags": [
                     "contacts"
                 ],
-                "summary": "Get a single contact by type and key value.",
+                "summary": "Get contact by type and key value",
                 "description": "Get a single contact of a certain type, using a key\r\nvalue that corresponds to the current instance configuration. This can\r\nonly be used for contact types with exactly ONE key.\r\n\r\nThe dynamic fields of the response object depend on\r\nthe current configuration.",
                 "operationId": "ContactsV_GetContactByTypeAndKeyValueAsync",
                 "parameters": [
@@ -1708,7 +1708,7 @@
                 "tags": [
                     "contacts"
                 ],
-                "summary": "Get the latest postal messages a contact has received, max 500",
+                "summary": "Get contact's latest postal messages (max 500)",
                 "description": "Can retrieve messages up to three (3) months old",
                 "operationId": "ContactMessage_GetPostalMessagesByContactId",
                 "parameters": [
@@ -1765,7 +1765,7 @@
                 "tags": [
                     "contacts"
                 ],
-                "summary": "Gets a list containing the contact IDs of all contacts who have been changed within a specified time range.",
+                "summary": "Get contacts whose data has been changed",
                 "operationId": "ContactsV_GetChangedContactIds",
                 "parameters": [
                     {
@@ -1838,7 +1838,7 @@
                 "tags": [
                     "contacts"
                 ],
-                "summary": "Get the contactId for one (or several) contacts using a choice of keys.",
+                "summary": "Get contactId for contacts using specified keys",
                 "description": "Get the contactId for one (or several) contacts using either:\r\n- email\r\n- socialSecurityNumber\r\n- mobilePhone\r\n- customKey (the customKey must be configured by your supplier)\r\n- any - the any field can contain email, socialSecurityNumber, mobilePhone or the custom key (and are checked in that order)",
                 "operationId": "ContactOverview_GetContactIdAsync",
                 "parameters": [
@@ -1944,7 +1944,7 @@
                 "tags": [
                     "contacts"
                 ],
-                "summary": "Create a number of contacts",
+                "summary": "Create many contacts in a bulk operation",
                 "description": "",
                 "operationId": "ContactBulk_CreateContactsInBulk",
                 "parameters": [
@@ -2085,7 +2085,7 @@
                 "tags": [
                     "contacts"
                 ],
-                "summary": "Unsubscribes contact from Sms",
+                "summary": "Unsubscribe a contact from SMS",
                 "description": "Optional messageId input if user wants to unsubscribe on specific message instead of last sent Sms",
                 "operationId": "ContactMessage_SmsUnsubscribeContact",
                 "parameters": [
@@ -2147,7 +2147,7 @@
                 "tags": [
                     "contacts"
                 ],
-                "summary": "Unsubscribes contact from email",
+                "summary": "Unsubscribe a contact from email",
                 "description": "Optional messageId input if user wants to unsubscribe on specific message instead of last sent email",
                 "operationId": "ContactMessage_EmailUnsubscribeContact",
                 "parameters": [
@@ -2194,7 +2194,7 @@
                 "tags": [
                     "contacts"
                 ],
-                "summary": "Update contacttype for contact",
+                "summary": "Update type for a contact",
                 "description": "Updates the contactType for a contact if all expected contact data is available",
                 "operationId": "ContactsV_UpdateContactType",
                 "parameters": [
@@ -2244,7 +2244,7 @@
                 "tags": [
                     "contacts"
                 ],
-                "summary": "Create a NPS response for a contact",
+                "summary": "Create NPS response for a contact",
                 "description": "Create a NPS response for a contact. Optional input is stordeId if Nps response is connected to a store",
                 "operationId": "Nps_CreateNpsResponse",
                 "parameters": [
@@ -2314,7 +2314,7 @@
                 "tags": [
                     "contacts"
                 ],
-                "summary": "Create a new contact.",
+                "summary": "Create a new contact",
                 "description": "Create a new contact.\r\nIf the contacts key identifier (example: Email) already exists : returns the GUID of the first entry found.",
                 "operationId": "ContactsV_ContactPost",
                 "parameters": [
@@ -2398,7 +2398,7 @@
                 "tags": [
                     "interactions"
                 ],
-                "summary": "Get Interaction",
+                "summary": "Get a specific interaction",
                 "description": "Retrieve a specific Interaction by providing the interactionId.",
                 "operationId": "Interaction_GetInteraction",
                 "parameters": [
@@ -2444,7 +2444,7 @@
                 "tags": [
                     "interactions"
                 ],
-                "summary": "Delete Interaction",
+                "summary": "Delete an interaction",
                 "description": "Delete a specific Interaction by providing the interactionId.",
                 "operationId": "Interaction_DeleteInteraction",
                 "parameters": [
@@ -2480,7 +2480,7 @@
                 "tags": [
                     "interactions"
                 ],
-                "summary": "Get multiple Interactions",
+                "summary": "Get multiple interactions",
                 "description": "Retrieve multiple Interactions of a specified type connected to a specific contactId. Both schemaId and contactId are required. \r\nThe continuation parameter can be used to access the next page when there are more than 50 records available. This token can be found in the response.",
                 "operationId": "Interaction_GetInteractions",
                 "parameters": [
@@ -2543,7 +2543,7 @@
                 "tags": [
                     "interactions"
                 ],
-                "summary": "Create new Interaction",
+                "summary": "Create new interaction",
                 "description": "Create a new Interaction connected to a specific contactId.",
                 "operationId": "Interaction_CreateInteraction",
                 "requestBody": {
@@ -2588,7 +2588,7 @@
                 "tags": [
                     "interactionschemas"
                 ],
-                "summary": "Get InteractionSchemas",
+                "summary": "Get all interaction schemas",
                 "description": "Retrieve all InteractionSchemas.",
                 "operationId": "InteractionSchema_GetInteractionSchemas",
                 "responses": {
@@ -2627,7 +2627,7 @@
                 "tags": [
                     "interactionschemas"
                 ],
-                "summary": "Create a new InteractionSchema",
+                "summary": "Create a new interaction schema",
                 "description": "Create a new InteractionSchema.",
                 "operationId": "InteractionSchema_CreateInteractionSchema",
                 "requestBody": {
@@ -2672,7 +2672,7 @@
                 "tags": [
                     "interactionschemas"
                 ],
-                "summary": "Get InteractionSchema",
+                "summary": "Get specific interaction schema",
                 "description": "Retrieve a specific InteractionSchema by providing the schemaId.",
                 "operationId": "InteractionSchema_GetInteractionSchema",
                 "parameters": [
@@ -2715,7 +2715,7 @@
                 "tags": [
                     "interactionschemas"
                 ],
-                "summary": "Delete InteractionSchema",
+                "summary": "Delete specific interaction schema",
                 "description": "Delete InteractionSchema by providing the schemaId.",
                 "operationId": "InteractionSchema_DeleteInteractionSchema",
                 "parameters": [
@@ -3100,7 +3100,7 @@
                 "tags": [
                     "orders"
                 ],
-                "summary": "Replace order",
+                "summary": "Replace specific order",
                 "description": "Sends a request to replace an order. The replacement is asynchronous - use the information in the response to follow the progress and catch any errors.",
                 "operationId": "Orders_Put",
                 "parameters": [
@@ -3171,7 +3171,7 @@
                 "tags": [
                     "orders"
                 ],
-                "summary": "Delete order",
+                "summary": "Delete specific order",
                 "description": "Sends a request to delete an order. The deletion is asynchronous - use the information in the response to follow the progress and catch any errors.",
                 "operationId": "Orders_Delete",
                 "parameters": [
@@ -3233,7 +3233,7 @@
                 "tags": [
                     "orders"
                 ],
-                "summary": "Get orders by contact",
+                "summary": "Get orders for a contact",
                 "description": "Gets all orders for a contact. Returns a paged result with links that can be used to get the next/previous result set.",
                 "operationId": "Orders_GetAllByContact",
                 "parameters": [
@@ -3581,7 +3581,7 @@
                 "tags": [
                     "orders"
                 ],
-                "summary": "Perform actions on order",
+                "summary": "Perform actions on an order",
                 "description": "Trigger action events for specific order.",
                 "operationId": "Orders_PostAction",
                 "parameters": [
@@ -3657,7 +3657,7 @@
                 "tags": [
                     "orders"
                 ],
-                "summary": "Change status of an existing order",
+                "summary": "Change status of existing order",
                 "description": "Overwrites the status of an existing order. The change is asynchronous - use the information in the response to follow the progress and catch any errors.",
                 "operationId": "Orders_PostStatus",
                 "parameters": [
@@ -3730,7 +3730,7 @@
                 "tags": [
                     "orders"
                 ],
-                "summary": "Change delivery of an existing order",
+                "summary": "Change delivery of existing order",
                 "description": "Overwrites the delivery of an existing order. The change is asynchronous - use the information in the response to follow the progress and catch any errors.",
                 "operationId": "Orders_PostDelivery",
                 "parameters": [
@@ -3803,7 +3803,7 @@
                 "tags": [
                     "personlookup"
                 ],
-                "summary": "Get a single contact information by either social security number or mobile phone number.",
+                "summary": "Look up contact by personal identity number or mobile",
                 "description": "",
                 "operationId": "PersonLookup_GetPersonLookup",
                 "parameters": [
@@ -3876,7 +3876,7 @@
                 "tags": [
                     "points"
                 ],
-                "summary": "Get point account by Id",
+                "summary": "Get specific point account by ID",
                 "description": "## Response Object\r\n- Id: The unique identifier of the point account.\r\n- Balance: The current balance of the point account.\r\n- BalanceExpires: The date when the balance needs to be recalculated, due to points expiring or becoming active. Balance can increase, decrease or stay the same. It is not recommended to use this field, it is an accidentally exposed implementation detail that will be removed in future versions of the API!\r\n- ContactId: The contact identifier associated with the point account.\r\n- DefinitionId: The definition identifier of the point account.\r\n- PendingPoints: The sum of pending transactions.\r\n- PointsWillExpireDueToInactivity: The date when the points will expire due to inactivity (only applies to expiry method \"Contact inactive\"). If this value is `null` it means that there are no points that will expire due to inactivity, either due to no such points having been earned on this point account, or all of them have already expired.",
                 "operationId": "PointAccountV_GetPointAccount",
                 "parameters": [
@@ -3935,7 +3935,7 @@
                 "tags": [
                     "points"
                 ],
-                "summary": "Gets a transaction by the provided transaction id",
+                "summary": "Get a specific transaction by ID",
                 "operationId": "PointTransaction_GetPointTransaction",
                 "parameters": [
                     {
@@ -3993,7 +3993,7 @@
                 "tags": [
                     "points"
                 ],
-                "summary": "Get point accounts by contact Id",
+                "summary": "Get point account by contact ID",
                 "description": "## Response Object\r\n- Id: The unique identifier of the point account.\r\n- Balance: The current balance of the point account.\r\n- BalanceExpires: The date when the balance needs to be recalculated, due to points expiring or becoming active. Balance can increase, decrease or stay the same. It is not recommended to use this field, it is an accidentally exposed implementation detail that will be removed in future versions of the API!\r\n- ContactId: The contact identifier associated with the point account.\r\n- DefinitionId: The definition identifier of the point account.\r\n- PendingPoints: The sum of pending transactions.\r\n- PointsWillExpireDueToInactivity: The date when the points will expire due to inactivity (only applies to expiry method \"Contact inactive\"). If this value is `null` it means that there are no points that will expire due to inactivity, either due to no such points having been earned on this point account, or all of them have already expired.",
                 "operationId": "PointAccountV_GetPointAccounts",
                 "parameters": [
@@ -4056,7 +4056,7 @@
                 "tags": [
                     "points"
                 ],
-                "summary": "Creates a point account for a contact and a point account definition",
+                "summary": "Create new point account for a contact",
                 "description": "Gets a list of accounts by contact id\r\n            \r\n## Response Object\r\n- Items: A list of point accounts.\r\n- Offset: The offset of the result set.\r\n- Count: The number of items in the result set.\r\n- TotalCount: The total number of items available.\r\n            \r\nEach point account contains:\r\n- Id: The unique identifier of the point account.\r\n- Balance: The current balance of the point account.\r\n- BalanceExpires: The date when the balance needs to be recalculated, due to points expiring or becoming active. Balance can increase, decrease or stay the same. It is not recommended to use this field, it is an accidentally exposed implementation detail that will be removed in future versions of the API!\r\n- ContactId: The contact identifier associated with the point account.\r\n- DefinitionId: The definition identifier of the point account.\r\n- PendingPoints: The sum of pending transactions.",
                 "operationId": "PointAccountV_CreatePointAccount",
                 "requestBody": {
@@ -4113,7 +4113,7 @@
                 "tags": [
                     "points"
                 ],
-                "summary": "Get point transactions for a specific point account Id.",
+                "summary": "Get point transactions for specific point account",
                 "operationId": "PointTransaction_GetPointTransactions",
                 "parameters": [
                     {
@@ -4245,7 +4245,7 @@
                 "tags": [
                     "points"
                 ],
-                "summary": "Add a point transaction to a point account",
+                "summary": "Add point transaction to specific point account",
                 "description": "## Recommendation\r\n            \r\nThis is the recommended way to add point transactions to a point account. Reasons:\r\n- By adding a single point transaction, failures are easier to handle\r\n- When adding the single point transaction you provide a unique id, which will be used as the idempotency key. This allows retries if you are unsure if the transaction was successfully added.\r\n- When adding the single transaction, the request is accepted quickly and the transaction is processed in the background.\r\n            \r\nIf you want to add multiple transactions at once, you can use the bulk endpoint POST api/[api version]/point-accounts/transactions\r\n            \r\n## Behavior\r\n            \r\nAsynchronously add a point transaction to the point account specified.\r\n            \r\nProvide a globally unique identifier for the transaction, if the transaction already exists then the request will do nothing. This is to prevent duplicate transactions and so that the consumer can retry a request if it fails or unsure if successful.\r\nThe point account must be created before a transaction can be added.",
                 "operationId": "PointTransaction_AddPointTransacion",
                 "requestBody": {
@@ -4293,7 +4293,7 @@
                 "tags": [
                     "points"
                 ],
-                "summary": "Adds Point transactions to the specified accounts for contact members.",
+                "summary": "Add point transactions to specified accounts",
                 "description": "## Recommendation\r\n            \r\nThe recommendation is to use POST api/[api version]/point-transactions to add a single transaction instead of using this endpoint. Reasons:\r\n- By adding a single point transaction, failures are easier to handle\r\n- When adding the single point transaction you provide a unique id, which will be used as the idempotency key. This allows retries if you are unsure if the transaction was successfully added.\r\n- When adding the single transaction, the request is accepted quickly and the transaction is processed in the background.\r\n            \r\nWith that said, if you still want to use this endpoint, please be aware of the following:\r\n\r\n## Behavior\r\n            \r\nProvide one or more point transactions to be added to the specified contacts' accounts.\r\nThe point transactions do not need to be added to the same contact.\r\nYou can add up to 1000 transactions in a single request.\r\n            \r\n### Point Transaction fields\r\n\r\n- contactId: Must be a Guid\r\n- amount: The amount of points, negative amounts are accepted.\r\n- definitionId: specifies to which point account each transaction should be sent to\r\n- timeStamp: If not provided then the default value is taken from the requestors system timezone.\r\n- source: Must be provided or else that specified transaction will not be accepted.\r\n- description: Must be provided or else that transaction will not be accepted.\r\n- validFrom: If not provided then the default value is taken from the requestors system timezone.\r\n- validTo: Specifies how long the points are valid\r\n- expireAfterMonthsInactive: Specifies how long the points are valid after the account has been inactive.\r\n            \r\n### Important info\r\n            \r\nIf any of the transactions are correct, the response will be Accepted. You need to ensure that the NotAccepted list in the response is empty to know that all transactions were added correctly.\r\n            \r\n### Idempotency-Key\r\n\r\nThe idempotency key is a unique identifier included in the header of an HTTP request to ensure the idempotence of certain operations. An idempotent operation is one that produces the same result regardless of how many times it is executed with the same input.\r\n\r\n#### Purpose\r\n\r\nThe primary purpose of the idempotency key is to enable safe retries of requests. In situations where a client needs to resend a request due to network issues or other transient failures, the idempotency key helps prevent unintended side effects by ensuring that repeated requests with the same key result in the same outcome.",
                 "operationId": "PointAccount_AddPointTransactions",
                 "parameters": [
@@ -4368,7 +4368,7 @@
                 "tags": [
                     "point-shop-items"
                 ],
-                "summary": "Get all point shop items.",
+                "summary": "Get all point shop items (WIP)",
                 "operationId": "PointShopItem_GetPointShopItems",
                 "responses": {
                     "200": {
@@ -4403,7 +4403,7 @@
                 "tags": [
                     "point-shop-items"
                 ],
-                "summary": "Create point shop item.",
+                "summary": "Create point shop item",
                 "operationId": "PointShopItem_CreatePointShopItem",
                 "requestBody": {
                     "content": {
@@ -4457,7 +4457,7 @@
                 "tags": [
                     "point-shop-items"
                 ],
-                "summary": "Remove a point shop item by id.",
+                "summary": "Remove point shop item by ID",
                 "operationId": "PointShopItem_RemovePointShopItem",
                 "parameters": [
                     {
@@ -4503,7 +4503,7 @@
                 "tags": [
                     "point-shop-items"
                 ],
-                "summary": "Purchase a point shop item.",
+                "summary": "Purchase point shop item",
                 "operationId": "PointShopItem_PurchasePointShopItem",
                 "requestBody": {
                     "content": {
@@ -4562,7 +4562,7 @@
                 "tags": [
                     "promotions"
                 ],
-                "summary": "Get multichannel promotion by id",
+                "summary": "Get multichannel promotion by ID",
                 "description": "Gets the multichannel promotion with the identifier which is set by Voyado",
                 "operationId": "MultichannelPromotions_GetById",
                 "parameters": [
@@ -4649,7 +4649,7 @@
                 "tags": [
                     "promotions"
                 ],
-                "summary": "Delete multichannel promotion by id",
+                "summary": "Delete multichannel promotion by ID",
                 "description": "Only unassigned multichannel promotions can be deleted",
                 "operationId": "MultichannelPromotions_DeleteById",
                 "parameters": [
@@ -4738,7 +4738,7 @@
                 "tags": [
                     "promotions"
                 ],
-                "summary": "Get multichannel promotion validity by id",
+                "summary": "Get multichannel promotion validity by ID",
                 "description": "Gets the multichannel promotion with the identifier which is an internal reference for Voyado",
                 "operationId": "MultichannelPromotions_GetValidityById",
                 "parameters": [
@@ -4827,7 +4827,7 @@
                 "tags": [
                     "promotions"
                 ],
-                "summary": "Get multichannel promotion by external id",
+                "summary": "Get multichannel promotion by external ID",
                 "description": "Gets the multichannel promotion with the identifier which is an external reference for Voyado",
                 "operationId": "MultichannelPromotions_GetByExternalId",
                 "parameters": [
@@ -4913,7 +4913,7 @@
                 "tags": [
                     "promotions"
                 ],
-                "summary": "Create a new multichannel promotion",
+                "summary": "Create new multichannel promotion",
                 "description": "Only creates multichannel promotion in status 'Draft'.",
                 "operationId": "MultichannelPromotions_Create",
                 "requestBody": {
@@ -4984,7 +4984,7 @@
                 "tags": [
                     "promotions"
                 ],
-                "summary": "Delete multichannel promotion by external id",
+                "summary": "Delete multichannel promotion by external ID",
                 "description": "Only unassigned multichannel promotions can be deleted",
                 "operationId": "MultichannelPromotions_DeleteByExternalId",
                 "parameters": [
@@ -5072,7 +5072,7 @@
                 "tags": [
                     "promotions"
                 ],
-                "summary": "Get multichannel promotion validity by external id",
+                "summary": "Get multichannel promotion validity by external ID",
                 "description": "Gets the multichannel promotion validity with the identifier which is an external reference for Voyado",
                 "operationId": "MultichannelPromotions_GetByValidityExternalId",
                 "parameters": [
@@ -5160,7 +5160,7 @@
                 "tags": [
                     "promotions"
                 ],
-                "summary": "Get available multichannel promotions assigned to a contact.",
+                "summary": "Get contact's multichannel promotions",
                 "description": "To filter on redemptionChannelType add it as a query string\r\n?redemptionChannelType=POS\r\nIt can be POS, ECOM or OTHER",
                 "operationId": "PromotionAssignments_GetActivePromotionAssignmentsForContactAsync",
                 "parameters": [
@@ -5217,7 +5217,7 @@
                 "tags": [
                     "promotions"
                 ],
-                "summary": "Assign a multichannel promotion to a contact",
+                "summary": "Assign multichannel promotion to contact",
                 "operationId": "PromotionAssignments_Assign",
                 "requestBody": {
                     "content": {
@@ -5268,7 +5268,7 @@
                 "tags": [
                     "promotions"
                 ],
-                "summary": "Updates validity for an existing multichannel promotion",
+                "summary": "Update validity for existing multichannel promotion",
                 "description": "Updates duration of an existing multichannel promotion.\r\nOnly multichannel promotion in status 'Draft' can be updated.",
                 "operationId": "MultichannelPromotions_UpdateValidity",
                 "parameters": [
@@ -5368,7 +5368,7 @@
                 "tags": [
                     "promotions"
                 ],
-                "summary": "Updates an existing multichannel promotion",
+                "summary": "Update existing multichannel promotion",
                 "description": "Updates an existing multichannel promotion.\r\nOnly multichannel promotion in status 'Draft' can be updated.",
                 "operationId": "MultichannelPromotions_Update",
                 "parameters": [
@@ -5598,7 +5598,7 @@
                 "tags": [
                     "reward-vouchers"
                 ],
-                "summary": "Get all reward vouchers for a contact. Expired, redeemed and available",
+                "summary": "Get all reward vouchers for contact",
                 "description": "Get all reward vouchers for a contact. Expired, redeemed and available.\r\nThe result can be paginated, using the offset and\r\ncount query parameters.",
                 "operationId": "RewardVouchers_GetRewardVouchersForContact",
                 "parameters": [
@@ -5662,7 +5662,7 @@
                 "tags": [
                     "reward-vouchers"
                 ],
-                "summary": "Get redeemed reward vouchers for a contact.",
+                "summary": "Get redeemed reward vouchers for contact",
                 "description": "Get redeemed reward vouchers for a contact.\r\nThe result can be paginated, using the offset and\r\ncount query parameters.",
                 "operationId": "RewardVouchers_GetRedeemedRewardVouchersForContact",
                 "parameters": [
@@ -5726,7 +5726,7 @@
                 "tags": [
                     "reward-vouchers"
                 ],
-                "summary": "Get available reward vouchers.",
+                "summary": "Get available reward vouchers for contact",
                 "description": "Get available reward vouchers for a contact.\r\n            \r\nExpired and redeemed reward vouchers are excluded\r\n            \r\nThe result can be paginated, using the *offset*\r\nand *count* query parameters.",
                 "operationId": "RewardVouchers_GetAvailableRewardVouchers",
                 "parameters": [
@@ -5805,7 +5805,7 @@
                 "tags": [
                     "reward-vouchers"
                 ],
-                "summary": "Redeem a reward voucher.",
+                "summary": "Redeem a reward voucher",
                 "description": "Redeem an active reward voucher with a provided identifier.",
                 "operationId": "RewardVouchers_RedeemRewardVoucher",
                 "parameters": [
@@ -5998,7 +5998,7 @@
                 "tags": [
                     "sms"
                 ],
-                "summary": "Send SMS to multiple phone numbers.",
+                "summary": "Send SMS to multiple phone numbers",
                 "description": "Send an SMS to one or multiple phone numbers. \r\n\r\nPhone numbers must be prefixed with a + and country code\r\n(e.g. +4670xxxxxxx for a Swedish mobile phone number).",
                 "operationId": "SmsMessages_SendSmsToPhoneNumbers",
                 "requestBody": {
@@ -6044,7 +6044,7 @@
                 "tags": [
                     "stores"
                 ],
-                "summary": "Gets all the stores.",
+                "summary": "Get all stores",
                 "operationId": "StoresV_GetStores",
                 "parameters": [
                     {
@@ -6090,7 +6090,7 @@
                 "tags": [
                     "stores"
                 ],
-                "summary": "Creates a store.",
+                "summary": "Create a store",
                 "operationId": "StoresV_CreateStore",
                 "requestBody": {
                     "content": {
@@ -6135,7 +6135,7 @@
                 "tags": [
                     "stores"
                 ],
-                "summary": "Gets a single store.",
+                "summary": "Get store's information",
                 "operationId": "StoresV_GetStore",
                 "parameters": [
                     {
@@ -6190,7 +6190,7 @@
                 "tags": [
                     "stores"
                 ],
-                "summary": "Updates a store.",
+                "summary": "Update a store.",
                 "description": "Updates a store. externalId is the store identifier.",
                 "operationId": "StoresV_UpdateStore",
                 "parameters": [
@@ -6302,7 +6302,7 @@
                 "tags": [
                     "tracking"
                 ],
-                "summary": "Register a collection of cart updates",
+                "summary": "Register a batch of cart updates",
                 "description": "Register a batch of cart updates. Cart updates are processed according to update time. If multiple cart updates are registered with the same identifier only the latest update (according to update time) is considered.\r\n            \r\nRequest model:\r\n- CartReference: Unique identifier of the cart. Links the update to a specific cart. Ex: \"006788ba-9f65-49c6-b3a0-2315d1854728\"\r\n- Time: Time of the cart update. ISO8601 with Time Zone Designators. Ex: \"2021-09-22T11:00:00+02:00\"\r\n- ContactId: Contact id of the cart owner. GUID or short GUID. Ex: \"ae16a9b4-f581-4568-8948-a96100b2afd4\"\r\n- SessionId: Unique identifier of the session. Ex: \"3b7e493b-5dfe-4b98-b6cf-049f2ea4309d\"\r\n- NewSession: Boolean value that indicates that new session.\r\n- Language: Culture code of the cart. A corresponding product feed should be configured. Ex: \"sv-SE\"\r\n- Url: Url to the cart. Ex: \"https://www.store.se/cart?id=006788ba-9f65-49c6-b3a0-2315d1854728\"\r\n- Items: Collection of cart items. Ex: \"[{\"Sku\":\"90183744\",\"Quantity\":1},{\"Sku\":\"90156607\",\"Quantity\":1}]\"\r\n- ExternalReferrer: The external site that the user came from (clicked a link) Ex: \"https://www.google.com\"\r\n- Utm: Collection of Key Value paired UTM tags",
                 "operationId": "Cart_RegisterCarts",
                 "requestBody": {
@@ -6365,7 +6365,7 @@
                 "tags": [
                     "tracking"
                 ],
-                "summary": "Register a collection of views to specific products for given contacts",
+                "summary": "Register product views for contacts",
                 "description": "Register a collection of views to specific products for given contacts.\r\n            \r\nRequest model:\r\n- ItemId: Unique SKU/Article Id/Item Id of the viewed product. Will be matched against SKU on the imported articles in Voyado. Ex: \"123XYZ\"\r\n- Category: Category of the product on the website. Will be used for filtering. Ex: \"novels &gt; cormac mccarthy &gt; the road\"\r\n- Time: Time of the product view. ISO8601 with Time Zone Designators. Ex: \"2021-09-22T11:00:00+02:00\"\r\n- ContactId: Contact id of the viewer. GUID or short GUID. Ex: \"FF9FD9AF-6778-4714-B0FE-F6E6612840C8\"\r\n- SessionId: Unique identifier of the session. Ex: \"3b7e493b-5dfe-4b98-b6cf-049f2ea4309d\"\r\n- NewSession: Boolean value that indicates that new session.\r\n- Language: Culture code of the cart. A corresponding product feed should be configured. Ex: \"sv-SE\"\r\n- Url: Url of the productview. Ex: \"https://www.voyado.com?sku=eu901-011-v10\"\r\n- ExternalReferrer: The external site that the user came from (clicked a link) Ex: \"https://www.google.com\"\r\n- Utm: Collection of Key Value paired UTM tags",
                 "operationId": "ProductView_RegisterProductViews",
                 "requestBody": {
@@ -6428,7 +6428,7 @@
                 "tags": [
                     "transactions"
                 ],
-                "summary": "Get transactions for a contact.",
+                "summary": "Get transactions for contact",
                 "description": "Retrieves transactions for a contact. Each line item includes article data \r\nfetched from articles based on the SKU, if available.\r\nSupports pagination with offset and count parameters.",
                 "operationId": "Transactions_GetTransactionsWithArticlesByContactId",
                 "parameters": [
