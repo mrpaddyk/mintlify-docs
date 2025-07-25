@@ -66,7 +66,7 @@
       },
       {
         "tab": "API Reference",
-        "openapi": "api-reference/openapi-3.json"
+        "openapi": "api-reference/openapi.json"
       }
     ],
     "global": {
