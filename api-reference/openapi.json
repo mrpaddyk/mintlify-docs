@@ -15,6 +15,7 @@
                 "tags": [
                     "achievements"
                 ],
+                "summary": "Get achievements for contact",
                 "operationId": "Achievements_GetAchievementsForContact",
                 "parameters": [
                     {
@@ -62,6 +63,7 @@
                 "tags": [
                     "achievements"
                 ],
+                "summary": "Get all achievements",
                 "operationId": "Achievements_GetAllAchievements",
                 "parameters": [
                     {
@@ -112,6 +114,7 @@
                 "tags": [
                     "achievements"
                 ],
+                "summary": "Get specific achievement by ID",
                 "operationId": "Achievements_SetAchievement",
                 "parameters": [
                     {
