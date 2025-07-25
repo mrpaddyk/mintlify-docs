@@ -20,10 +20,6 @@
   "navigation": {  
     "tabs": [
       {
-        "tab": "API Reference",
-        "openapi": "api-reference/openapi-engage.json"
-      },
-      {
         "tab": "Guides",
         "groups": [
           {
@@ -67,6 +63,10 @@
             ]
           }
         ]
+      },
+      {
+        "tab": "API Reference",
+        "openapi": "api-reference/openapi-engage.json"
       }
     ],
     "global": {
