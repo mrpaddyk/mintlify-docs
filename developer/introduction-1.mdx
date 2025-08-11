@@ -45,3 +45,18 @@ This site is optimized for desktop. If you view it on a mobile device, navigate 
 
 - [What's new?](https://developer.voyado.com/en/introduction/what-s-new-.html)
 - [Changes in API v3](https://developer.voyado.com/en/introduction/changes-in-api-v3.html)
+
+<CodeGroup>
+
+```bash v2
+curl -X GET "https://api.example.com/v2/users" \
+  -H "Authorization: Bearer YOUR_TOKEN"
+```
+
+```bash v3
+curl -X GET "https://api.example.com/v3/users" \
+  -H "Authorization: Bearer YOUR_TOKEN" \
+  -H "Accept: application/json"
+```
+
+</CodeGroup>
