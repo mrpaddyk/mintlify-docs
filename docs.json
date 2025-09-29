@@ -25,6 +25,7 @@
           {
             "group": "Developer level 1",
             "pages": [
+              "retail-media/retail-media-for-suppliers",
               "developer/introduction-1",
               "developer/staging-environment",
               "developer/custom-triggers-1",
