@@ -7,6 +7,20 @@ footer {
   margin-top: 2rem;
 }
 
+table thead tr th,
+table thead tr td {
+  background-color: #791a3f !important;
+  color: white !important;
+  padding: 8px;
+  border: 1px solid #000;
+  font-weight: 600 !important;
+}
+
+/* Table first column (excluding header row) */
+table tbody tr td:first-child {
+  background-color: white !important;
+}
+
 .table th, .content table:not([class*="table"]) th,
 .table td,
 .content table:not([class*="table"]) td {
@@ -20,18 +34,4 @@ footer {
   font-weight: 500;
   vertical-align: bottom;
   border-bottom: 1px solid #000;
-}
-
-table thead tr th,
-table thead tr td {
-  background-color: #791a3f !important;
-  color: white !important;
-  padding: 8px;
-  border: 1px solid #000;
-  font-weight: 600 !important;
-}
-
-/* Table first column (excluding header row) */
-table tbody tr td:first-child {
-  background-color: white !important;
 }
