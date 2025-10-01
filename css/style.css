@@ -9,16 +9,16 @@ footer {
 
 table thead tr th,
 table thead tr td {
-  background-color: #791a3f !important;
-  color: white !important;
+  background-color: #791a3f;
+  color: white;
   padding: 8px;
   border: 1px solid #000;
-  font-weight: 600 !important;
+  font-weight: 600;
 }
 
 /* Table first column (excluding header row) */
 table tbody tr td:first-child {
-  background-color: white !important;
+  background-color: white;
 }
 
 .table th, .content table:not([class*="table"]) th,
@@ -30,8 +30,8 @@ table tbody tr td:first-child {
 }
 
 .table thead th, .content table:not([class*="table"]) thead th {
-  font-size: 0.9375rem;
+  /* font-size: 0.9375rem; */
   font-weight: 500;
-  vertical-align: bottom;
+  /* vertical-align: bottom; */
   border-bottom: 1px solid #000;
 }
