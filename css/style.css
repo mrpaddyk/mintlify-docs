@@ -1,16 +1,15 @@
-
 table thead tr th,
 table thead tr td {
-  background-color: #791a3f;
-  color: white;
+  background-color: #791a3f !important;
+  color: white !important;
   padding: 8px;
-  border: 1px solid #000;
-  font-weight: 600;
+  border: 1px solid #fff;
+  font-weight: 600 !important;
 }
 
 /* Table first column (excluding header row) */
 table tbody tr td:first-child {
-  background-color: white;
+  background-color: white !important;
 }
 
 /*
