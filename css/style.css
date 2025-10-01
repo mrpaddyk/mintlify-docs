@@ -13,6 +13,7 @@ table tbody tr td:first-child {
   background-color: white;
 }
 
+/*
 .table th, .content table:not([class*="table"]) th,
 .table td,
 .content table:not([class*="table"]) td {
@@ -27,3 +28,4 @@ table tbody tr td:first-child {
   vertical-align: bottom; 
   border-bottom: 1px solid #000;
 }
+*/
