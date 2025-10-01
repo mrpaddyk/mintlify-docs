@@ -7,13 +7,27 @@ footer {
   margin-top: 2rem;
 }
 
-/* Table header row YOU MAY HAVE TO MANUALLY ADD THE THEAD*/
+.table th, .content table:not([class*="table"]) th,
+.table td,
+.content table:not([class*="table"]) td {
+  padding: 0.75rem;
+  vertical-align: center;
+  background: rgba(255, 0, 0, 0.05); /* ADDED BY PADDY 2025-01*/
+}
+
+.table thead th, .content table:not([class*="table"]) thead th {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  vertical-align: bottom;
+  border-bottom: 1px solid #000;
+}
+
 table thead tr th,
 table thead tr td {
   background-color: #791a3f !important;
   color: white !important;
   padding: 8px;
-  border: 1px solid #fff;
+  border: 1px solid #000;
   font-weight: 600 !important;
 }
 
