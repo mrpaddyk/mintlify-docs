@@ -32,6 +32,6 @@ table tbody tr td:first-child {
 .table thead th, .content table:not([class*="table"]) thead th {
   /* font-size: 0.9375rem; */
   font-weight: 500;
-  /* vertical-align: bottom; */
+  vertical-align: bottom; 
   border-bottom: 1px solid #000;
 }
