@@ -1,0 +1,23 @@
+#navbar {
+  background: "#fffff2";
+  padding: 1rem;
+}
+
+footer {
+  margin-top: 2rem;
+}
+
+/* Table header row YOU MAY HAVE TO MANUALLY ADD THE THEAD*/
+table thead tr th,
+table thead tr td {
+  background-color: #791a3f !important;
+  color: white !important;
+  padding: 8px;
+  border: 1px solid #fff;
+  font-weight: 600 !important;
+}
+
+/* Table first column (excluding header row) */
+table tbody tr td:first-child {
+  background-color: white !important;
+}
