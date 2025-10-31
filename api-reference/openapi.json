@@ -9,11 +9,11 @@
             "url": "https://developer.voyado.com"
         }
     },
-  "servers": [
-    {
-      "url": "https://revidetestar.acceptanstest.eclub.se"
-    }
-  ],
+    "servers": [
+      {
+        "url": "https://revidetestar.acceptanstest.eclub.se"
+      }
+    ],
     "paths": {
         "/api/v3/contacts/{contactId}/achievements": {
             "get": {
@@ -6052,7 +6052,7 @@
                 "tags": [
                     "stores"
                 ],
-                "summary": "Get all stores",
+                "summary": "Get all of the stores",
                 "operationId": "StoresV_GetStores",
                 "parameters": [
                     {
