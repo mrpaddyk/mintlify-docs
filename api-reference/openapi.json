@@ -9,6 +9,11 @@
             "url": "https://developer.voyado.com"
         }
     },
+  "servers": [
+    {
+      "url": "https://revidetestar.acceptanstest.eclub.se"
+    }
+  ],
     "paths": {
         "/api/v3/contacts/{contactId}/achievements": {
             "get": {
